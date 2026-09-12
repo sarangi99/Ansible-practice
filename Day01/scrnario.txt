@@ -1,0 +1,41 @@
+Scenario 01
+=======================================================================
+Step 01: Create two ec2 instance (debian os) master node and host node
+Step 02: Connect Master node to Host node using passwordless authentication 
+method (No username pass , No pemfile)
+
+Steps to perform
+=================
+**********************
+Login to Mster node
+***********************
+
+Navigate to root user ($ sudo -i)
+From root user create a new user ($ adduser sarangi)
+Give the password as sarangi
+Loged in as sarangi user
+After loged in switch back to Home directory ($ cd) /home/sarangi
+Give the root level Permission to sarangi user ($ visudo) 
+sarangi ALL=(ALL) NOPASSWD: ALL
+Give the server to Permission of password authentication "yes"
+debian = /etc/ssh/sshd_config
+restart the ssh service ($ restart ssh service) once
+Now generate the ssh key in the master server ($ ssh-keygen) 
+copy the node private ids into the master server using ($ ssh-copy-id)
+restart the ssh service ($ restart ssh service) twice
+
+INSTALL THE ANSIBLE ($ sudo apt install ansible) 
+
+**********************
+Login to host node
+***********************
+Navigate to root user ($ sudo -i)
+From root user create a new user ($ adduser sarangi)
+Give the password as sarangi
+Loged in as sarangi user
+After loged in switch back to Home directory ($ cd) /home/sarangi
+Give the root level Permission to sarangi user ($ visudo) 
+sarangi ALL=(ALL) NOPASSWD: ALL
+Give the server to Permission of password authentication "yes"
+debian = /etc/ssh/sshd_config
+restart the ssh service ($ restart ssh service)
