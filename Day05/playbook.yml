@@ -1,5 +1,5 @@
 ---
-- host: all
+- hosts: webservers
   tasks:
     - name: static file copy from master to nodes
       copy:
