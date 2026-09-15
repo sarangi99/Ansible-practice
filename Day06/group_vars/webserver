@@ -1,3 +1,2 @@
 ---
 jenkinsurlvar: "https://get.jenkins.io/war-stable/2.568.3/jenkins.war"
-jenkinsdestvar: "/opt/jenkins.war"

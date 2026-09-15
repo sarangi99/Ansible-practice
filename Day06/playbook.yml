@@ -5,5 +5,5 @@
     - name: download jenkins from master to nodes
       get_url:
         url: "{{jenkinsurlvar}}"
-        dest: "{{jenkinsdestvar}}"
+        dest: /opt/jenkins.war
         force_basic_auth: yes
