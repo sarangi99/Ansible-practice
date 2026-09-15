@@ -1,0 +1,3 @@
+---
+jenkinswarvar: https://get.jenkins.io/war-stable/latest/
+jenkinsdestvar: /opt/

@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: download jenkins from master to nodes
+      get_url:
+        url: "{{jenkinsurlvar}}"
+        dest: "{{jenkinsdestvar}}"
+        force_basic_auth: yes
