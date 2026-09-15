@@ -1,9 +1,9 @@
 ---
  - name: create a directory
-    file: 
+   file: 
       path: /tmp/mydirectory
       state: directory
  - name: create a file
-    file:
+   file:
       path: /tmp/mydirectory/file01.txt
       state: touch
