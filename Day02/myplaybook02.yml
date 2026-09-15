@@ -22,20 +22,20 @@
 
      when: ansible_os_family == "RedHat"
 
-   - name: install httpd on debian
+   - name: install apache2 on debian
      apt: 
        name: "{{debianpackagevar}}"
        state: present
 
      when: ansible_os_family == "Debian"
 
-   - name: started httpd on debian
+   - name: started apache2 on debian
      service: 
-       name: "{{stateservicepackage1var}}"
+       name: "{{stateservicepackage2var}}"
        state: started
 
      when: ansible_os_family == "Debian"
-   - name: restarted httpd on debian
+   - name: restarted apache2 on debian
      service: 
        name: apache2
        state: restarted
