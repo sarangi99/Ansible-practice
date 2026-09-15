@@ -8,37 +8,37 @@
        name: "{{redhatpackagevar}}"
        state: present
 
-    when os_family == "RedHat"
+     when os_family == "RedHat"
    - name: started httpd on redhat
      service: 
        name: "{{stateservicepackage1var}}"
        state: started
 
-    when os_family == "RedHat"
+     when os_family == "RedHat"
    - name: restarted httpd on redhat
      service: 
        name: "{{stateservicepackage2var}}"
        state: restarted
 
-    when os_family == "RedHat"
+     when os_family == "RedHat"
 
    - name: install httpd on debian
      apt: 
        name: "{{debianpackagevar}}"
        state: present
 
-    when os_family == "Debian"
+     when os_family == "Debian"
 
    - name: started httpd on debian
      service: 
        name: "{{stateservicepackage1var}}"
        state: started
 
-    when os_family == "Debian"
+     when os_family == "Debian"
    - name: restarted httpd on debian
      service: 
        name: "{{stateservicepackage2var}}"
        state: restarted
 
-    when os_family == "Debian"
+     when os_family == "Debian"
   
