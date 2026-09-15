@@ -1,2 +1,2 @@
 ---
-ubuntujavapackage: openjdk-21-jdk
+debianjavapackage: openjdk-17-jdk
