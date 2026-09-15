@@ -1,0 +1,3 @@
+---
+debianjavapacakge: openjdk-21-jdk
+redhatjavapackage: java-21-openjdk

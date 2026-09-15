@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: install java on debian 
+     apt:
+      name: "{{debianjavapacakge}}"
+      state: present
+     when: ansible_os_family == "Debian"
+   - name: install java on redhat
+     yum:
+      name: "{{redhatjavapackage}}"
+      state: present
+     when: ansible_os_family == "RedHat"
+  
