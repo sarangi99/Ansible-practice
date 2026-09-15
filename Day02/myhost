@@ -3,7 +3,7 @@
 172.31.9.117
 
 [webserver:vars]
-redhatpackagevar = httpd
-debaianpackagevar = apache2
-stateservicepackage1var = started
-stateservicepackage2var = restarted
+redhatpackagevar=httpd
+debaianpackagevar=apache2
+stateservicepackage1var=started
+stateservicepackage2var=restarted
