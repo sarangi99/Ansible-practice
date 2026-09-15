@@ -1,0 +1,9 @@
+[webserver]
+172.31.4.86
+172.31.41.94
+
+[webserver:vars]
+redhatpackagevar = httpd
+debaianpackagevar = apache2
+stateservicepackage1var = started
+stateservicepackage2var = restarted
