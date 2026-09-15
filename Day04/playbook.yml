@@ -3,7 +3,8 @@
   become: yes
   gather_facts: yes
   tasks:
-   - include_tasks: myfile.yml
+   - name: Include directory tasks
+     include_tasks: myfile.yml
    - name: install apache2 webserver on debian
      apt: 
        name: apache2
