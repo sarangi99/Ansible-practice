@@ -5,10 +5,25 @@
   tasks:
    - name: install java on debian 
      apt:
-      name: "{{debianjavapacakge}}"
+      name: "{{debianjavapackage}}"
       state: present
      when: ansible_os_family == "Debian"
    - name: install java on redhat
+     yum:
+      name: "{{redhatjavapackage}}"
+      state: present
+     when: ansible_os_family == "RedHat"
+   - name: install java on ubuntu
+     apt:
+      name: "{{debianjavapackage}}"
+      state: present
+     when: ansible_os_family == "Ubuntu"
+   - name: install java on debian
+     apt:
+      name: "{{debianjavapackage}}"
+      state: present
+     when: ansible_os_family == "Debian" 
+   - name: install java on Redhat
      yum:
       name: "{{redhatjavapackage}}"
       state: present
