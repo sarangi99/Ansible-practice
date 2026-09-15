@@ -1,0 +1,7 @@
+---
+- host: all
+  tasks:
+    - name: static file copy from master to nodes
+      copy:
+        src: staticfile
+        dest: /tmp/mydirectory/staticfile
