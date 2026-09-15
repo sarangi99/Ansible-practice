@@ -17,7 +17,7 @@
      when: ansible_os_family == "RedHat"
    - name: restarted httpd on redhat
      service: 
-       name: "{{stateservicepackage2var}}"
+       name: httpd
        state: restarted
 
      when: ansible_os_family == "RedHat"
@@ -37,7 +37,7 @@
      when: ansible_os_family == "Debian"
    - name: restarted httpd on debian
      service: 
-       name: "{{stateservicepackage2var}}"
+       name: apache2
        state: restarted
 
      when: ansible_os_family == "Debian"
