@@ -1,9 +1,12 @@
 ---
 - hosts: all
   become: yes
+  vars:
+    jenkinsurlvar: "https://get.jenkins.io/war-stable/2.568.3/jenkins.war"
+    jenkinsdestvar: /opt/jenkins.war
   tasks:
     - name: download jenkins from master to nodes
       get_url:
         url: "{{jenkinsurlvar}}"
-        dest: /opt/jenkins.war
+        dest: "{{jenkinsdestvar}}"
         force_basic_auth: yes
