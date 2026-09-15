@@ -5,3 +5,7 @@
       copy:
         src: staticfile
         dest: /tmp/staticfile
+    - name: dynamic file copy from master to nodes
+      template:
+        src: dynamicfile.j2
+        dest: var/www/html/index.html
