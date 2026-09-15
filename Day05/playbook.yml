@@ -1,5 +1,6 @@
 ---
 - hosts: webservers
+  become: yes
   tasks:
     - name: static file copy from master to nodes
       copy:
