@@ -8,4 +8,4 @@
     - name: dynamic file copy from master to nodes
       template:
         src: dynamicfile.j2
-        dest: var/www/html/index.html
+        dest: /var/www/html/index.html
