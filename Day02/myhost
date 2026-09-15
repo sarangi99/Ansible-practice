@@ -5,5 +5,5 @@
 [webserver:vars]
 redhatpackagevar=httpd
 debaianpackagevar=apache2
-stateservicepackage1var=started
-stateservicepackage2var=restarted
+stateservicepackage1var=httpd
+stateservicepackage2var=apache2
