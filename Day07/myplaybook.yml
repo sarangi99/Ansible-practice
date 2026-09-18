@@ -5,12 +5,12 @@
   tasks:
     - name: Install Nginx
       apt:
-        name: "{{nginxvarfordebian}}"
+        name: nginx
         state: present
       when: ansible_os_family == "Debian"
     - name: Start Nginx service
       service:
-        name: "{{nginxvarfordebian}}"
+        name: nginx
         state: started
         enabled: yes
       when: ansible_os_family == "Debian"
