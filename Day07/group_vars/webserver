@@ -2,5 +2,5 @@
 javavarfordebian: openjdk-21-jdk
 javavarforredhat: java-21-openjdk
 
-tomcatvarfordebian: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.122/bin/apache-tomcat-9.0.122.tar.gz
-tomcatvarforredhat: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.122/bin/apache-tomcat-9.0.122.tar.gz
+#tomcatvarfordebian: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.122/bin/apache-tomcat-9.0.122.tar.gz
+#tomcatvarforredhat: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.122/bin/apache-tomcat-9.0.122.tar.gz
