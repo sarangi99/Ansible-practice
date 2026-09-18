@@ -1,0 +1,36 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: "{{nginxvarfordebian}}"
+        state: present
+      when: ansible_os_family == "Debian"
+    - name: Start Nginx service
+      service:
+        name: "{{nginxvarfordebian}}"
+        state: started
+        enabled: yes
+      when: ansible_os_family == "Debian"
+    - name: Install java on debian
+      apt:
+        name: "{{javavarfordebian}}"
+        state: present
+      when: ansible_os_family == "Debian"
+    - name: Install java on redhat
+      yum:
+        name: "{{javavarforredhat}}"
+        state: present
+      when: ansible_os_family == "RedHat"
+    - name: Install tomcat on debian
+      apt:
+        name: "{{tomcatvarfordebian}}"
+        state: present
+      when: ansible_os_family == "Debian"
+    - name: Install tomcat on redhat
+      yum:
+        name: "{{tomcatvarforredhat}}"
+        state: present
+      when: ansible_os_family == "RedHat"
