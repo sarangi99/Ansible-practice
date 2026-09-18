@@ -14,7 +14,7 @@
         state: started
         enabled: yes
       when: ansible_os_family == "Debian"
-    - name: Install java on debian
+    - name: Installjavavarfordebian java on debian
       apt:
         name: "{{javavarfordebian}}"
         state: present
